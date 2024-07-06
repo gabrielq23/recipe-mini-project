@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Attempt at making a website that contains recipes, frontend only.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

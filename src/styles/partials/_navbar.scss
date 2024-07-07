@@ -17,12 +17,14 @@
         text-shadow: 0 1px 3px var(--shadow-color);
     }
     .nav-links{
+        display: flex;
         a{
             margin-left: 1em;
             color: var(--text-light);
             letter-spacing: 2px;
             text-transform: uppercase;
             position: relative;
+            text-decoration: none;
             &::before{
                 content: '';
                 display: inline-block;
@@ -42,8 +44,6 @@
             }
             &.active{
                 color: var(--primary-color);
-                font-weight: bold;
-                
             }
         }
     }

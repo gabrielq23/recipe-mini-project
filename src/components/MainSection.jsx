@@ -1,13 +1,20 @@
 import React from 'react'
 import CustomImage from './CustomImage'
+import { useNavigate } from 'react-router-dom'
 
 const MainSection = () => {
+
+    const navigate = useNavigate();
 
     const images = [
         "/img/gallery/img_1.jpg",
         "/img/gallery/img_2.jpg",
         "/img/gallery/img_3.jpg"
     ]
+
+    const redirectToRecipes = () => {
+        navigate('/recipes');
+    };
 
     return (
         <div className='section main'>
@@ -18,7 +25,7 @@ const MainSection = () => {
                 <p className='info'>
                     A place to find recipes for many different foods
                 </p>
-                <button className='btn'>
+                <button onClick={redirectToRecipes} className='btn'>
                     EXPLORE NOW
                 </button>
             </div>

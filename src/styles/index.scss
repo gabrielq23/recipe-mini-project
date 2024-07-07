@@ -52,10 +52,12 @@ img{
     &:hover{
         box-shadow: 0 1px 3px var(--shadow-color);
     }
+    a{
+        color: white;
+    }
 }
 
 .custom-image{
-    background-color: red;
     height: 0;
     width: 100%;
     position: relative;
@@ -101,6 +103,9 @@ img{
 
 @import "partials/_sectionfooter.scss";
 
+@import "partials/_sectionsearches.scss";
+
+@import "partials/_sectionrecipes.scss";
 
 .main{
     padding-block: 3vw;

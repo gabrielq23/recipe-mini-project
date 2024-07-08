@@ -18,25 +18,4 @@
             animation: getAnimationDuration(.5s) slideInRight forwards;
         }
     }
-    .search-box{
-        display: flex;
-        align-items: center;
-        height: 40px;
-        justify-content: flex-end;
-        input, .btn{
-            height: 35px;
-        }
-        input{
-            border: 1px solid brown;
-            min-width: 250px;
-            padding: 0 0.5em;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-        }
-        .btn{
-            padding-block: 0;
-            padding-inline: .75em;
-            border-radius: 0 5px 5px 0;
-        }
-    }
 }

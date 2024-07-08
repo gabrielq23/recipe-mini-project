@@ -1,8 +1,37 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PreviousSearches from '../components/PreviousSearches'
 import RecipeCard from '../components/RecipeCard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 const Recipes = () => {
+
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
+    const [prevSearch, setPrevSearch] = useState([]);
+
+    const handleInputChange = (e) => {
+        setSearchTerm(e.target.value);
+        console.log(searchTerm);
+    }
+
+    const handleSearchRecipes = (searchTerm) => {
+        if (searchTerm.trim() !== '') {
+            setPrevSearch(prev => [...prev, searchTerm]);
+            const filtered = recipes.filter(recipe =>
+                recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+            setFilteredRecipes(filtered);
+            console.log(filteredRecipes);
+        }
+        else {
+            setFilteredRecipes(recipes);
+        }
+    }
+
+    const clearSearches = () => {
+        setPrevSearch([]);
+    }
 
     const recipes = [
         {
@@ -26,14 +55,26 @@ const Recipes = () => {
     ]
 
     useEffect(() => {
+        setFilteredRecipes(recipes);
+    }, // eslint-disable-next-line
+        [])
+
+    useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
 
     return (
         <div>
-            <PreviousSearches />
+            <PreviousSearches prevSearch={prevSearch} />
+            <div className='search-box'>
+                <button className='btn' onClick={clearSearches}>clear searches</button>
+                <input type="text" placeholder='search...' onChange={handleInputChange} />
+                <button className='btn'>
+                    <FontAwesomeIcon icon={faSearch} onClick={() => handleSearchRecipes(searchTerm)} />
+                </button>
+            </div>
             <div className='recipe-container'>
-                {recipes.map((recipe, i) =>
+                {filteredRecipes.map((recipe, i) =>
                     <RecipeCard key={i} recipe={recipe} />
                 )}
             </div>

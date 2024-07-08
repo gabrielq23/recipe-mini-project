@@ -43,3 +43,30 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-gap: 1.5em;
 }
+
+.search-box{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: flex-end;
+    margin-bottom: 1em;
+    input, .btn{
+        height: 35px;
+    }
+    input{
+        border: 1px solid brown;
+        min-width: 250px;
+        padding: 0 0.5em;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+    }
+    .btn{
+        padding-block: 0;
+        padding-inline: .75em;
+        border-radius: 0 5px 5px 0;
+        font-size: .70em;
+        src{
+            font-size: 1em;
+        }
+    }
+}

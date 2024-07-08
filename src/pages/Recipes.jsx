@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PreviousSearches from '../components/PreviousSearches'
 import RecipeCard from '../components/RecipeCard'
 
@@ -24,6 +24,10 @@ const Recipes = () => {
             description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim commodi corporis aliquid nesciunt repellat expedita architecto qui, ex vitae, aliquam, quo ipsa. Quidem placeat magnam repellendus amet iusto odit sequi!"
         }
     ]
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <div>

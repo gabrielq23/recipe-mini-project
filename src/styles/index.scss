@@ -25,6 +25,7 @@ body{
     font-size: var(--font-size);
     font-family: 'Times New Roman', Times, serif;
     padding-top: 55px;
+    background-color: var(--background-light);
 }
 
 a{
@@ -91,6 +92,9 @@ img{
     .col{
         width: 50%;
     }
+    &.options-block{
+        display: block
+    }
 }
 
 @import "partials/_sectionmain.scss";
@@ -106,6 +110,8 @@ img{
 @import "partials/_sectionsearches.scss";
 
 @import "partials/_sectionrecipes.scss";
+
+@import "partials/_sectionoptions.scss";
 
 .main{
     padding-block: 3vw;

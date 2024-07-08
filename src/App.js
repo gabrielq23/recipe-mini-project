@@ -6,7 +6,7 @@ import Settings from "./pages/Settings";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (
+  return ( 
     <Router>
         <Navbar />
         <div className="container main">

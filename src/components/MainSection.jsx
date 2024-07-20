@@ -8,13 +8,13 @@ const MainSection = () => {
     const navigate = useNavigate();
 
     const images = [
-        "/img/gallery/img_1.jpg",
-        "/img/gallery/img_2.jpg",
-        "/img/gallery/img_3.jpg"
+        "img/gallery/img_1.jpg",
+        "img/gallery/img_2.jpg",
+        "img/gallery/img_3.jpg"
     ]
 
     const redirectToRecipes = () => {
-        navigate('/recipes');
+        navigate('/recipe-mini-project/recipes');
     };
 
     useEffect(() => {

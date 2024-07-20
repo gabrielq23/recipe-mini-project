@@ -10,19 +10,19 @@ const Navbar = () => {
     const links = [
         {
             name: "Home",
-            path: "/",
+            path: "/recipe-mini-project/",
             icon: faHome
         },
         {
             name: "Recipes",
-            path: "/recipes",
+            path: "/recipe-mini-project/recipes",
             icon: faList
         },
-        {
-            name: "Settings",
-            path: "/settings",
-            icon: faCog
-        }
+        // {
+        //     name: "Settings",
+        //     path: "/recipe-mini-project/settings",
+        //     icon: faCog
+        // }
     ]
 
     const closeSidebar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
     return (
         <>
             <div className='navbar container'>
-                <Link to="/" className='logo'>food and recipes website</Link>
+                <Link to="/recipe-mini-project/" className='logo'>food and recipes website</Link>
                 <div className='nav-links'>
                     {links.map(link =>
                         <Link className={location.pathname === link.path ? "active" : ""} to={link.path} key={link.name}>{link.name}</Link>
